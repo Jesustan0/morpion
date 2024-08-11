@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monospace;
+}
+
+h1{
+    text-align: center;
+}
+
+.cell{
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    cursor:pointer;
+}
+
+.cell:nth-child(3n){
+    border-right: none;
+}
+
+.cell:nth-child(6) ~ .cell {
+    border-bottom: none;
+}
+
+.board{
+    width: 300px;* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    body {
+        font-family: monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .board {
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .cell {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 80px;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        cursor: pointer;
+    }
+
+    .cell:nth-child(3n) {
+        border-right: none;
+    }
+
+    .cell:nth-child(6) ~ .cell {
+        border-bottom: none;
+    }
+
+    .white {
+        color: white;
+    }
+
+    #gameEnd {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #gameEnd p, #gameEnd input {
+        text-align: center;
+    }
+
+    #gameEnd p {
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem;
+}
+
+.white{
+    color: white;
+}
+
+#gameTitle{
+    padding-top: 20px;
+    font-size: 50px;
+    font-weight: bold;
+}
+#gameEnd{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0; right: 0; left: 0; bottom: 0;
+    background-color: black;
+}
+
+#gameEnd p, #gameEnd input{
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-45%, -45%);
+    text-align: center;
+}
+#gameEnd p{
+    margin-top: 2rem;
+}
+
+.container{
+    margin: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
