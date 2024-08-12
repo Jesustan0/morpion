@@ -25,6 +25,7 @@ cells.forEach(cell => {
 function playGame(e) {
     e.target.innerHTML = playerTurn;
 
+
     if (checkWin(playerTurn)) {
         updateGameStatus(`wins${playerTurn}`);
         return endGame();
@@ -58,24 +59,23 @@ function updateGameStatus(status) {
 
     switch (status) {
         case playerOne:
-            statusText = "Au tour du joueur 2 (O)";
-            break;
-        case playerTwo:
             statusText = "Au tour du joueur 1 (X)";
             break;
+        case playerTwo:
+            statusText = "Au tour du joueur 2 (O)";
+            break;
         case `wins${playerOne}`:
-            statusText = "Le joueur 1 (X) a gagné";
+            statusText = "🎉 Le joueur 1 (X) a gagné  🎉";
             break;
         case `wins${playerTwo}`:
-            statusText = "Le joueur 2 (O) a gagné";
+            statusText = "🎉 Le joueur 2 (O) a gagné  🎉";
             break;
         case 'draw':
-            statusText = "Égalité!";
+            statusText = "🤝 Égalité  🤝";
             break;
         default:
             statusText = "";
     }
-
     gameStatus.innerText = statusText;
     endGameStatus.innerText = statusText;
 }
